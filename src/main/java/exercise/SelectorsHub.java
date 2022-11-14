@@ -20,7 +20,7 @@ public class SelectorsHub {
 		By emaiId= By.cssSelector("#userId");
 		
 		ElementUtil util = new ElementUtil(driver);
-		util.getElement(null)
+		util.getElement(null);
 	}
 
 }
