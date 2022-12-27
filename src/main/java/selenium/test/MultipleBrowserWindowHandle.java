@@ -11,12 +11,18 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class MultipleBrowserWindowHandle {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 
 		driver.get("https://opensource-demo.orangehrmlive.com/");// parent window
+		Thread.sleep(3000);
 		String parentWindowId = driver.getWindowHandle();
+		
+		
+		driver.findElement(By.name("username")).sendKeys("Admin");
+		driver.findElement(By.name("password")).sendKeys("admin123");
+		driver.findElement(By.xpath("//button[@type='submit']")).click();
 		
 		driver.findElement(By.xpath("//img[@alt='OrangeHRM on Facebook']")).click();
 		driver.findElement(By.xpath("//img[@alt='LinkedIn OrangeHRM group']")).click();

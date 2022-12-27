@@ -18,7 +18,6 @@ public class IkeaBasicFlow {
 
 		br.launchUrl("https://www.ikea.com/au/en/");
 		br.windowSettings();
-		driver.manage().deleteAllCookies();
 		ElementUtil eu = new ElementUtil(driver);
 
 		// System.out.println(driver.getTitle());
@@ -52,6 +51,7 @@ public class IkeaBasicFlow {
 		eu.waitForElementVisible(shoppingCartBtn, 10).click();
 		// checkout 
 		eu.waitForElementVisible(checkoutBtn, 10).click();
+		
 		
 	}
 

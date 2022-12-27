@@ -22,6 +22,7 @@ public class AmazonFooter {
 		driver.manage().window().maximize();
 		Thread.sleep(3000);
 		
+		
 		List<WebElement> headerList = driver.findElements(By.xpath("//div[@id='nav-xshop']//a"));
 		
 		System.out.println(headerList.size());

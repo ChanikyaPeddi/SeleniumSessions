@@ -29,10 +29,11 @@ public class Test {
 		
 		Wait<WebDriver> wait1 =new FluentWait<WebDriver>(driver)
 				.pollingEvery(Duration.ofSeconds(500))
+				.withTimeout(Duration.ofSeconds(10))
 				.withMessage("elemetn not present")
 				.ignoring(NoSuchElementException.class, StaleElementReferenceException.class)
 						;
-				
+		
 	}
 	
 

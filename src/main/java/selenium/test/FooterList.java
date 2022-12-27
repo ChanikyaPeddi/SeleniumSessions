@@ -24,6 +24,7 @@ public class FooterList {
 		 List<WebElement> footerList= driver.findElements(By.xpath("//div[@class='footer-main']//ul//a"));
 		 //using streams
 		 footerList.stream().forEach(e->System.out.println(e.getText()));
+		 
 
 	}
 
